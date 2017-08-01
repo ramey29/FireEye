@@ -7,6 +7,8 @@ npm install
 
 gulp
 
+You can even run manually, if you dont want to run gulp setup, by opening index.html in browser directly.
+
 Have used Twitter widget to get the two peoples timeline.You can tweet to one user only if you are logged in.
 
 Apart from that the project has capabilities of Browser Sync, concatenation, minification of js, minification of css, image minification and run sequence which will take care of all your project development needs dynamically.
