@@ -1,0 +1,36 @@
+<!doctype html>
+<html data-ng-app="Project1">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="RB">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" >
+        
+        <!-- build:css css/style.min.css -->
+        <link href="css/style.css" type="text/css" rel="stylesheet"/>
+        <link href="css/style2.css" type="text/css" rel="stylesheet"/>
+        <!-- endbuild-->
+    </head>
+    <body id="twitter-wjs">
+        <div class="mainContent clearfix">
+            <header><img src="images/twitterTL-Logo.png"></header>
+            <div class="a-dv fLft" id="container1">
+                <div onclick="callTwitter('SrBachchan')">Amitabh Bachchan Timeline</div>     
+                <div onclick="callTwitter('BishnoiRamey')">Rameshwar Bishnoi Timeline</div>
+<br>
+                <div><a href="https://twitter.com/intent/tweet?screen_name=BishnoiRamey" class="twitter-mention-button" data-show-count="false">Tweet to @BishnoiRamey</a></div>
+            </div>
+            <div class="b-dv fLft" id="containerX">
+                
+            </div>
+            
+                
+
+        </div>
+        <!-- build:js js/main.min.js -->
+        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        
+        <!-- endbuild-->
+    </body>
+</html>
