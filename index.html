@@ -10,28 +10,48 @@
         <link href="css/style2.css" type="text/css" rel="stylesheet"/>
         <!-- endbuild-->
     </head>
-    <body >
-        <div class="mainContent clearfix">
-           <div ng-app="XangularjsAppX" >
-                <ul ng-controller="techRadar">
+    <body ng-app="XangularjsAppX" ng-controller="techRadar">
+        <div class="mainContent clearfix" >
+        <header><img src="images/twitterTL-Logo.png" /></header>
+           <div class="a-dv fLft">
+             <div ng-click="api1()">USER 1</div>
+             <div ng-click="api2()">USER 2</div>
+             <div id="myBtn">Tweet</div>
+             
+           </div>
+           <div  class="b-dv fLft">
+           	<div class="dvStyling">
+                <ul >
                 <li ng-repeat="article in articles">
-                <h2>{{article.title}}</h2>
-                <div><h4>{{article.author}}</h4>
-                <h4>{{article.description | date : 'shortDate'}}</h4>
-                <h4>{{article.publishedAt}}</h4></div>
+                <div>
+                	<span class="mName">{{ article.author }} </span>
+                    <span class="sName">  @{{ article.author }}</span>
+                    <span >{{article.publishedAt  | date }}</span></div>
+                <div class="destion">
+                    {{article.title}}{{article.description}}
+              	</div>
                 <div>
                 <img src="{{article.urlToImage}}" /><br>
-                <a href="{{article.url}}">Read about the article here</a>
+               
                 </div>
                 </li>
 
                 </ul>
-                <hello-world/>
-        </div>
-            
+              </div>  
+            </div>
+             
                 
 
         </div>
+        <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="tweetH"><span>Compose a tweet</span><span class="close">&times;</span></div>
+                <div class="tweetInput"><textarea ng-model="tweet" maxlength="50" type="text"></textarea></div>
+                <div><button ng-click="addTweet()" id="tweetBtn">Tweet</button></div>
+              </div>
+            
+            </div>
         <!-- build:js js/main.min.js -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>

@@ -12,7 +12,7 @@ body{
   font-size:14px;
   line-height:20px;
   background: #e6ecf0;
-  .fLft{float:left;}
+  .fLft {float:left;}
   .clearfix:after {
   content: "";
   display: table;
@@ -22,14 +22,68 @@ body{
   img{vertical-align: middle;}
   }
   .mainContent{margin:0 auto;width:100%;
-  .a-dv{width:30%;margin: 40px auto;
-    
-       div{display:inline-block; font-size:16px; background:#1b95e0;color:#fff;padding:8px 20px;margin:20px 40px;cursor:pointer; 
-      &:hover{background:#0c7abf}
-      }
+  .a-dv { width:30%;margin: 40px auto;  
+  	div{ border-color: #1DA1F2;
+    color: #1DA1F2; border:1px solid ;background-color: #fff;border-radius:100px;margin-bottom:20px;text-align:center;width:200px;height:36px;line-height:36px;cursor:pointer;}
   }
-  .b-dv{width:60%;margin: 40px auto;}
+  .b-dv{width:60%;margin: 40px auto;max-width:700px;
+   .dvStyling{background:#fff;padding:20px;
+   
+   &:hover{background:#f4f5f6;}
+   ul{
+	   li{padding:30px 0;border-bottom:1px solid #666;
+	   
+	   img{width: 100%;
+           height: auto;}}}
+   .mName{font-size:14px;font-weight:bold;}
+   .sName{font-size:13px;color: #657786;}
+   .destion{font-size:16px;color:#000;padding:10px 0}
+   }
+  }
 
   }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	/* Modal Content */
+.modal-content {
+	max-width:600px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+	.tweetH{text-align:center;font-size:18px; font-weight:bold; border-bottom: 1px solid #f6f7f8;padding-bottom:20px;}
+	.tweetInput {
+		textarea{border: 1px solid #1DA1F2;font-size:14px;line-height:18px;width:500px;margin:0 auto;height:150px;}}
+}
+
+
+
 }
 

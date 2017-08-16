@@ -7,28 +7,47 @@
         
         <link rel="stylesheet" href="css/style.min.css">
     </head>
-    <body >
-        <div class="mainContent clearfix">
-           <div ng-app="XangularjsAppX" >
-                <ul ng-controller="techRadar">
+    <body ng-app="XangularjsAppX">
+        <div class="mainContent clearfix" ng-controller="techRadar">
+        <header><img src="images/twitterTL-Logo.png" /></header>
+           <div class="a-dv fLft">
+             <div ng-click="api1()">USER 1</div>
+             <div ng-click="api2()">USER 2</div>
+             <div id="myBtn">Tweet</div>
+             
+           </div>
+           <div  class="b-dv fLft">
+           	<div class="dvStyling">
+                <ul >
                 <li ng-repeat="article in articles">
-                <h2>{{article.title}}</h2>
-                <div><h4>{{article.author}}</h4>
-                <h4>{{article.description | date : 'shortDate'}}</h4>
-                <h4>{{article.publishedAt}}</h4></div>
+                <div>
+                	<span class="mName">{{ article.author }} </span>
+                    <span class="sName">  @{{ article.author }}</span>
+                    <span >{{article.publishedAt  | date }}</span></div>
+                <div class="destion">
+                    {{article.title}}{{article.description}}
+              	</div>
                 <div>
                 <img src="{{article.urlToImage}}" /><br>
-                <a href="{{article.url}}">Read about the article here</a>
+               
                 </div>
                 </li>
 
                 </ul>
-                <hello-world/>
-        </div>
-            
+              </div>  
+            </div>
+             
                 
 
         </div>
+        <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="tweetH"><span>Compose a tweet</span><span class="close">&times;</span></div>
+                <p>Some text in the Modal..</p>
+              </div>
+            
+            </div>
         <script src="js/main.min.js"></script>
     </body>
 </html>
