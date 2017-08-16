@@ -7,18 +7,24 @@
         
         <link rel="stylesheet" href="css/style.min.css">
     </head>
-    <body id="twitter-wjs">
+    <body >
         <div class="mainContent clearfix">
-            <header><img src="images/twitterTL-Logo.png"></header>
-            <div class="a-dv fLft" id="container1">
-                <div onclick="callTwitter('SrBachchan')">Amitabh Bachchan Timeline</div>     
-                <div onclick="callTwitter('BishnoiRamey')">Rameshwar Bishnoi Timeline</div>
-<br>
-                <div><a href="https://twitter.com/intent/tweet?screen_name=BishnoiRamey" class="twitter-mention-button" data-show-count="false">Tweet to @BishnoiRamey</a></div>
-            </div>
-            <div class="b-dv fLft" id="containerX">
-                
-            </div>
+           <div ng-app="XangularjsAppX" >
+                <ul ng-controller="techRadar">
+                <li ng-repeat="article in articles">
+                <h2>{{article.title}}</h2>
+                <div><h4>{{article.author}}</h4>
+                <h4>{{article.description | date : 'shortDate'}}</h4>
+                <h4>{{article.publishedAt}}</h4></div>
+                <div>
+                <img src="{{article.urlToImage}}" /><br>
+                <a href="{{article.url}}">Read about the article here</a>
+                </div>
+                </li>
+
+                </ul>
+                <hello-world/>
+        </div>
             
                 
 
